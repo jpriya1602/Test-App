@@ -6,12 +6,10 @@ namespace Test_App.question.RequestDto
 {
     public class QuestionRequestDto
     {
-        public DateTime PostedTime { get; set; }
-        
         [Required]
         public string QuestionPosted { get; set; }
         
         [Required] 
-        public User PostedBy { get; set; }
+        public string PostedBy { get; set; }
     }
 }

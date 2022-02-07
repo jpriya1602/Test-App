@@ -17,7 +17,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="src\question\controller" />
       <Folder Include="src\question\responsedto" />
     </ItemGroup>
 
