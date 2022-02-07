@@ -28,5 +28,10 @@ namespace Test_App.user.service
             };
            return  _userRepository.Save(user);
         }
+
+        public User GetUserByUserName(string userName)
+        {
+            return _userRepository.GetByUserName(userName);
+        }
     }
 }

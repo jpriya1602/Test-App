@@ -27,5 +27,15 @@ namespace Test_App.user.controller
              }
              return Ok(userResponseDto);
         }
+
+        [HttpGet("{username}")]
+        public IActionResult Get(string username)
+        {
+            var user = _userService.GetUserByUserName(username);
+            if (user is null)
+                return NotFound();
+            return Ok(user);
+        }
+        
     }
 }

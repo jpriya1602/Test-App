@@ -16,4 +16,9 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="src\question\controller" />
+      <Folder Include="src\question\responsedto" />
+    </ItemGroup>
+
 </Project>

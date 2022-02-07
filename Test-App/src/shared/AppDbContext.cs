@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Test_App.question.entities;
 using Test_App.user.entities;
 
 namespace Test_App.shared
@@ -11,5 +12,6 @@ namespace Test_App.shared
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Question> Questions { get; set; }
     }
 }
