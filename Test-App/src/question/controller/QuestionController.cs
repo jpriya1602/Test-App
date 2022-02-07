@@ -30,5 +30,12 @@ namespace Test_App.question.controller
 
                return question;
         }
+
+        [HttpGet("{id}")]
+        public ActionResult<Question> Get(int id)
+        {
+            return _questionService.GetQuestionById(id);
+
+        }
     }
 }

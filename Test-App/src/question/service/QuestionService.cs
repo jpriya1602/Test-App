@@ -38,5 +38,10 @@ namespace Test_App.question.service
             return null;
 
         }
+
+        public Question GetQuestionById(int id)
+        {
+            return _questionRepository.GetById(id);
+        }
     }
 }
