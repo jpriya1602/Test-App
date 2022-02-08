@@ -13,6 +13,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Test_App.shared;
 using Microsoft.EntityFrameworkCore;
+using Test_App.answers.repository;
+using Test_App.answers.service;
 using Test_App.question.repository;
 using Test_App.question.service;
 using Test_App.user.Repository;
@@ -39,6 +41,8 @@ namespace Test_App
             services.AddTransient<UserRepository>();
             services.AddTransient<QuestionRepository>();
             services.AddScoped<QuestionService>();
+            services.AddTransient<AnswerRepository>();
+            services.AddScoped<AnswerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

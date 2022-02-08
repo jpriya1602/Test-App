@@ -23,5 +23,10 @@ namespace Test_App.user.Repository
         {
             return _context.Users.FirstOrDefault(x => x.Username == username);
         }
+        
+        public User GetByUserId(int id)
+        {
+            return _context.Users.FirstOrDefault(x => x.Id == id);
+        }
     }
 }
