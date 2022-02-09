@@ -21,7 +21,13 @@ namespace Test_App.answers.controller
         public ActionResult<Answer> Post(AnswerRequestDto answerRequestDto)
         {
            return _answerService.AddAnswer(answerRequestDto);
-        } 
+        }
+
+        [HttpPut]
+        public ActionResult<Answer> PostComment(CommentDto commentDto)
+        {
+            return _answerService.AddComment(commentDto);
+        }
         
     }
 }

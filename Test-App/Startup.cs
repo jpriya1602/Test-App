@@ -35,6 +35,9 @@ namespace Test_App
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
             services.AddDbContext<AppDbContext>(options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnectionString")));
             services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo {Title = "Test_App", Version = "v1"}); });
             services.AddScoped<UserService>();
@@ -43,6 +46,7 @@ namespace Test_App
             services.AddScoped<QuestionService>();
             services.AddTransient<AnswerRepository>();
             services.AddScoped<AnswerService>();
+            services.AddTransient<CommentRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
